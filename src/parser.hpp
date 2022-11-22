@@ -9,9 +9,15 @@
 
 namespace cpp_format{
 
-class parser{
+class context{
 public:
-    std::vector<element> model;
+
+};
+
+class parser{
+    std::vector<std::reference_wrapper<context>> context_stack;
+public:
+    container_element root;
 
     void feed(std::string_view line);
 

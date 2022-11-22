@@ -18,6 +18,11 @@ public:
     {}
 };
 
+class container_element : public element{
+public:
+    std::vector<std::unique_ptr<element>> children;
+};
+
 class empty_line : public element{
 public:
     empty_line(text_location loc) :

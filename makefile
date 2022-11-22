@@ -7,6 +7,8 @@ this_name := cpp-format
 
 this_srcs := $(call prorab-src-dir, src)
 
+this_ldlibs += -lutki
+
 $(eval $(prorab-build-app))
 
 this_run_name := $(this_name)
